@@ -20,7 +20,7 @@ function copyCoupon(btn) {
 
 // Google 스프레드시트 연동 설정
 // 스프레드시트 "웹에 게시" 후 아래 SHEET_ID를 교체하세요
-var SHEET_ID = 'YOUR_SHEET_ID_HERE';
+var SHEET_ID = '1AT7S-PJCpvY4sIB8irYMcer69D5AlcytBD3HKdLfVtw';
 var SHEET_GID = '0';
 var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&gid=' + SHEET_GID;
 
