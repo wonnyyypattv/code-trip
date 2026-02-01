@@ -1,3 +1,15 @@
+function copyCoupon(btn) {
+  var code = btn.getAttribute('data-code');
+  navigator.clipboard.writeText(code).then(function () {
+    btn.classList.add('copied');
+    btn.querySelector('.code-copy-hint').textContent = '복사 완료!';
+    setTimeout(function () {
+      btn.classList.remove('copied');
+      btn.querySelector('.code-copy-hint').textContent = '클릭하여 복사';
+    }, 2000);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Platform filter tabs
   var tabs = document.querySelectorAll('.filter-tab');
@@ -17,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  // Coupon code copy is handled by global copyCoupon function
 
   // Mobile menu toggle
   var toggle = document.querySelector('.menu-toggle');

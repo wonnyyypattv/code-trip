@@ -191,6 +191,43 @@ body {
 
 .card-condition { font-size: 0.78rem; color: #888; }
 
+/* Coupon Code Button */
+.coupon-code-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  background: #fff8e1;
+  border: 2px dashed #f59e0b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.coupon-code-btn:hover { background: #fef3c7; border-color: #d97706; }
+
+.coupon-code-btn.copied { background: #dcfce7; border-color: #22c55e; }
+
+.code-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #92400e;
+}
+
+.coupon-code-btn.copied .code-text { color: #166534; }
+
+.code-copy-hint {
+  font-size: 0.75rem;
+  color: #b45309;
+  font-weight: 500;
+}
+
+.coupon-code-btn.copied .code-copy-hint { color: #166534; }
+
 .card-cta {
   display: block;
   text-align: center;
