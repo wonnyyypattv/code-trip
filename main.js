@@ -13,7 +13,7 @@ function copyCoupon(btn) {
     }
     setTimeout(function () {
       btn.classList.remove('copied', 'revealed');
-      btn.querySelector('.code-copy-hint').textContent = '클릭하여 복사';
+      btn.querySelector('.code-copy-hint').textContent = '클릭하여 확인';
     }, 3000);
   });
 }
