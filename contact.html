@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문의하기 | 코드트립</title>
+  <meta name="description" content="코드트립에 문의사항이 있으시면 이 페이지를 통해 연락해주세요.">
+  <link rel="canonical" href="https://code-trip.org/contact.html">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">&#9992; 코드트립</a>
+      <nav aria-label="메인 메뉴" class="main-nav">
+        <button class="menu-toggle" aria-label="메뉴 열기">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">쿠폰</a></li>
+          <li><a href="/guides/klook-guide.html" class="nav-link">가이드</a></li>
+          <li><a href="/about.html" class="nav-link">소개</a></li>
+          <li><a href="/contact.html" class="nav-link active">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>문의하기</h1>
+      <p>궁금한 점이나 제안사항이 있으시면 언제든 연락해주세요</p>
+    </div>
+  </section>
+
+  <main class="page-content">
+    <h2>연락 방법</h2>
+    <p>코드트립에 대한 문의, 쿠폰 정보 제보, 제휴 제안, 오류 신고 등 어떤 내용이든 환영합니다. 아래 양식을 작성해 주시면 확인 후 빠르게 답변드리겠습니다.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" required placeholder="홍길동">
+
+      <label for="email">이메일</label>
+      <input type="email" id="email" name="email" required placeholder="example@email.com">
+
+      <label for="subject">제목</label>
+      <input type="text" id="subject" name="subject" required placeholder="문의 제목을 입력해주세요">
+
+      <label for="message">내용</label>
+      <textarea id="message" name="message" required placeholder="문의 내용을 자세히 작성해주세요"></textarea>
+
+      <button type="submit">보내기</button>
+    </form>
+
+    <h2>자주 묻는 질문</h2>
+
+    <h3>쿠폰이 적용되지 않아요</h3>
+    <p>쿠폰은 각 플랫폼의 정책에 따라 사전 고지 없이 종료되거나 조건이 변경될 수 있습니다. 코드트립에서는 가능한 최신 정보를 반영하지만, 실시간 반영이 어려운 경우가 있습니다. 만료된 쿠폰을 발견하시면 제보해주시면 빠르게 업데이트하겠습니다.</p>
+
+    <h3>제휴 링크를 통해 예약하면 추가 비용이 발생하나요?</h3>
+    <p>아닙니다. 코드트립의 링크를 통해 예약하셔도 이용자에게 추가 비용은 전혀 발생하지 않습니다. 오히려 제휴 링크를 통해 추가 할인 혜택을 받으실 수 있는 경우도 있습니다.</p>
+
+    <h3>특정 플랫폼의 쿠폰 정보를 추가해주실 수 있나요?</h3>
+    <p>물론입니다. 추가를 원하시는 플랫폼이나 쿠폰 정보가 있다면 위 양식을 통해 알려주세요. 검토 후 반영하도록 하겠습니다.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="/about.html">소개</a>
+        <a href="/contact.html">문의</a>
+        <a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 코드트립 (code-trip.org). All rights reserved.</p>
+    </div>
+  </footer>
+  <script defer src="/main.js"></script>
+</body>
+</html>
