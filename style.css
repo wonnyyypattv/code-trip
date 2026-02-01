@@ -216,6 +216,24 @@ body {
   font-weight: 800;
   letter-spacing: 0.1em;
   color: #92400e;
+  display: inline-block;
+  max-width: 3.5ch;
+  overflow: hidden;
+  vertical-align: bottom;
+  transition: max-width 0.3s ease;
+}
+
+.code-text::after {
+  content: '••••';
+  letter-spacing: 0.05em;
+}
+
+.coupon-code-btn.revealed .code-text {
+  max-width: 10ch;
+}
+
+.coupon-code-btn.revealed .code-text::after {
+  content: '';
 }
 
 .coupon-code-btn.copied .code-text { color: #166534; }
