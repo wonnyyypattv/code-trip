@@ -246,6 +246,29 @@ body {
 
 .coupon-code-btn.copied .code-copy-hint { color: #166534; }
 
+/* Verified banner & timestamp */
+.verified-banner {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+}
+
+.verified-banner a { color: #15803d; text-decoration: underline; }
+
+.card-verified {
+  display: block;
+  text-align: right;
+  font-size: 0.72rem;
+  color: #16a34a;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
 .card-cta {
   display: block;
   text-align: center;
