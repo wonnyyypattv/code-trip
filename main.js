@@ -32,6 +32,29 @@ var AFFILIATE_URLS = {
   myrealtrip: 'https://myrealt.rip/U5kT3d'
 };
 
+var AFFILIATE_PARAMS = {
+  klook: { key: 'aid', value: '110430' },
+  agoda: { key: 'cid', value: '1929265' },
+  tripcom: { key: 'utm_source', value: 'codetrip' },
+  hotelscom: { key: 'rffrid', value: '9FLUW4d' },
+  myrealtrip: null
+};
+
+function appendAffiliate(url, platform) {
+  if (!url) return AFFILIATE_URLS[platform] || '#';
+  var param = AFFILIATE_PARAMS[platform];
+  if (!param) return url;
+  try {
+    var u = new URL(url);
+    if (!u.searchParams.has(param.key)) {
+      u.searchParams.set(param.key, param.value);
+    }
+    return u.toString();
+  } catch (e) {
+    return url;
+  }
+}
+
 var PLATFORM_NAMES = {
   klook: { name: 'Klook', colorClass: 'klook-color' },
   agoda: { name: 'Agoda', colorClass: 'agoda-color' },
@@ -72,7 +95,7 @@ function loadPromotions() {
 
         var platform = String(data.platform).toLowerCase();
         var pInfo = PLATFORM_NAMES[platform] || { name: platform, colorClass: '' };
-        var url = data.url || AFFILIATE_URLS[platform] || '#';
+        var url = appendAffiliate(data.url, platform);
 
         var article = document.createElement('article');
         article.className = 'coupon-card';
