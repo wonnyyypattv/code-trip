@@ -85,12 +85,21 @@ function loadPromotions() {
         });
 
         // active 필터
-        if (String(data.active).toUpperCase() === 'FALSE') return;
+        if (data.active === false || String(data.active).toUpperCase() === 'FALSE') return;
 
-        // 만료일 필터
+        // platform이 비어있으면 스킵
+        if (!data.platform) return;
+
+        // 만료일 필터 (Google gviz 날짜: "Date(2026,1,28)" 형식)
         if (data.expiresAt) {
-          var expires = new Date(data.expiresAt);
-          if (expires < now) return;
+          var expires;
+          var dm = String(data.expiresAt).match(/Date\((\d+),(\d+),(\d+)\)/);
+          if (dm) {
+            expires = new Date(parseInt(dm[1]), parseInt(dm[2]), parseInt(dm[3]));
+          } else {
+            expires = new Date(data.expiresAt);
+          }
+          if (!isNaN(expires.getTime()) && expires < now) return;
         }
 
         var platform = String(data.platform).toLowerCase();
@@ -116,8 +125,8 @@ function loadPromotions() {
         grid.appendChild(article);
       });
     })
-    .catch(function () {
-      // 스프레드시트 로드 실패 시 기존 하드코딩 카드만 표시
+    .catch(function (err) {
+      console.error('프로모션 로드 실패:', err);
     });
 }
 
