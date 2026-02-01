@@ -385,6 +385,28 @@ body {
 
 .contact-form button:hover { background: var(--color-primary-hover); }
 
+/* === Blog Images === */
+.page-content figure {
+  margin: 24px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.page-content figure picture,
+.page-content figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.page-content figcaption {
+  font-size: 0.78rem;
+  color: #999;
+  text-align: center;
+  padding: 8px 0 0;
+}
+
 /* === Blog List === */
 .blog-list { display: flex; flex-direction: column; gap: 24px; }
 
