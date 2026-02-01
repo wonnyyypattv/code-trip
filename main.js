@@ -1,8 +1,16 @@
 function copyCoupon(btn) {
   var code = btn.getAttribute('data-code');
+  var card = btn.closest('.coupon-card');
+  var ctaLink = card ? card.querySelector('.card-cta') : null;
+  var url = ctaLink ? ctaLink.href : null;
   navigator.clipboard.writeText(code).then(function () {
     btn.classList.add('copied');
-    btn.querySelector('.code-copy-hint').textContent = '복사 완료!';
+    btn.querySelector('.code-copy-hint').textContent = '복사 완료! 이동 중...';
+    if (url) {
+      setTimeout(function () {
+        window.open(url, '_blank', 'noopener');
+      }, 500);
+    }
     setTimeout(function () {
       btn.classList.remove('copied');
       btn.querySelector('.code-copy-hint').textContent = '클릭하여 복사';
