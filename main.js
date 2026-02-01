@@ -26,7 +26,7 @@ var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq
 
 var AFFILIATE_URLS = {
   klook: 'https://www.klook.com/ko/?aid=110430',
-  agoda: 'https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1929265',
+  agoda: 'https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1957557',
   tripcom: 'https://www.trip.com/t/LsTtSuOjKT2',
   hotelscom: 'https://www.hotels.com/affiliate/9FLUW4d',
   myrealtrip: 'https://myrealt.rip/U5kT3d'
@@ -34,7 +34,7 @@ var AFFILIATE_URLS = {
 
 var AFFILIATE_PARAMS = {
   klook: { key: 'aid', value: '110430' },
-  agoda: { key: 'cid', value: '1929265' },
+  agoda: { key: 'cid', value: '1957557' },
   tripcom: { key: 'utm_source', value: 'codetrip' },
   hotelscom: { key: 'rffrid', value: '9FLUW4d' },
   myrealtrip: null
