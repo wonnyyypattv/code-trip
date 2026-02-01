@@ -385,6 +385,36 @@ body {
 
 .contact-form button:hover { background: var(--color-primary-hover); }
 
+/* === Blog List === */
+.blog-list { display: flex; flex-direction: column; gap: 24px; }
+
+.blog-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.blog-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+
+.blog-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.blog-card h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
+
+.blog-card h2 a { color: var(--color-text); text-decoration: none; }
+
+.blog-card h2 a:hover { color: var(--color-primary); }
+
+.blog-excerpt { font-size: 0.88rem; color: var(--color-text-sub); line-height: 1.7; margin-bottom: 8px; }
+
+.blog-meta { font-size: 0.78rem; color: #999; }
+
 /* === Footer === */
 .site-footer {
   background: var(--color-text);
